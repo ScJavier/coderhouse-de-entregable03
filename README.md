@@ -4,9 +4,9 @@ This repo contains scrips for the third homework of the course of data engineeri
 
 ### Dockerfile
 
-This Dockerfile is used to create a Docker image for running a Python application. It utilizes the official Python 3.9 image as its base. The Docker image is configured to set the working directory inside the container to /app.
+This `Dockerfile` is used to create a Docker image for running a Python application. It utilizes the official Python 3.9 image as its base. The Docker image is configured to set the working directory inside the container to /app.
 
-The Dockerfile copies the requirements.txt file into the container's working directory and installs the dependencies listed in the file using pip. It then copies the main.py script, utilities directory (utils), and creds.json file into the container.
+The `Dockerfile` copies the requirements.txt file into the container's working directory and installs the dependencies listed in the file using pip. It then copies the main.py script, utilities directory (utils), and creds.json file into the container.
 
 Upon container startup, the Docker image will execute the main.py script using the python command.
 
@@ -28,11 +28,11 @@ Table in DB must exist previously.
 
 ### requirements.txt
 
-The requirements.txt file lists all the Python dependencies required for the project. These dependencies are necessary for running the Python application smoothly and may include libraries, frameworks, or packages needed for specific functionalities.
+The `requirements.txt` file lists all the Python dependencies required for the project. These dependencies are necessary for running the Python application smoothly and may include libraries, frameworks, or packages needed for specific functionalities.
 
-### 
+### creds_template.json
 
-The creds_template.json file is a template for configuring database credentials required by the application. You need to provide your own database credentials by replacing the placeholder values with your actual database information.
+The `creds_template.json` file is a template for configuring database credentials required by the application. You need to provide your own database credentials by replacing the placeholder values with your actual database information.
 
 The file should be configured as follows:
 
@@ -64,7 +64,7 @@ cd coderhouse-de-entregable03
 
 3. Set up your `creds.json` file with your own credentials. See `creds_template.json`.
 
-**Reminder:** Make sure Docker is installed on your machine before running these commands.
+**Reminder:** Make sure Docker is installed on your machine before running the followind commands.
 
 4. Build the Docker image using the provided Dockerfile:
 
@@ -78,4 +78,4 @@ docker build -t image_name .
 docker run image_name
 ```
 
-**Note:** If you encounter the RuntimeError: can't start new thread error, it may be necessary to run the docker run command with the --privileged parameter.
+**Note:** If you encounter the `RuntimeError: can't start new thread error`, it may be necessary to run the docker run command with the `--privileged` parameter.
